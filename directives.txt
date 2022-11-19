@@ -1,0 +1,137 @@
+
+
+app.ts:
+=======
+
+users:string[]=["john","peter","Omed"];
+
+other ex of for:(2)
+================
+
+users:any[]=[
+
+  {id:101,name:'jhon':city:'delhi'},
+  {id:102,name:'peter':city:'pune'},
+  {id:103,name:'omed':city:'delhi'}
+
+];
+
+
+
+
+
+app.html:
+==========
+
+<ul>
+
+  <li *ngFor="let user of users"> {{user}}<li>
+
+</ul>
+
+
+other ex of for:(2):
+====================
+
+<table>
+  <tr>
+      <th>Id</th>
+	  <th>Name</th>
+	  <th>City</th>
+  </tr>
+  
+  <tr *ngFor=""let user of users>
+      <td>{{user.id}}</td>
+      <td>{{user.Name}}</td>
+	  <td>{{user.city}}</td>
+  
+  
+  </tr>
+
+</table>
+
+
+
+
+
+
+NgIf directive:
+===================
+
+
+app.ts:
+=======
+
+isUserLoggedIn:boolean=true;
+
+
+
+
+app.html:
+=========
+
+<div *ngIf="isUserLoggedIn; else logout">
+
+<h3>Welcome to User Profile</h3>
+
+</div>
+
+
+
+<ng-template #logout>
+
+  <p>you are not logged in</p>
+
+</ng-template>
+
+
+
+
+
+
+ng switch:
+====================>>>
+
+
+app.ts:
+-------
+
+public myChoice="one";
+
+
+
+app.html:
+=========
+
+
+<div [ngSwitch]="myChoice">
+
+     <div class="switchVase">
+	 
+	    <div *ngSwitchCase="'one'">First Block</div>
+	    <div *ngSwitchCase="'second'">second Block</div>
+		<div *ngSwitchCase="'third'">third Block</div>
+		<div *ngSwitchCase="'forth'">fourth Block</div>
+	 	 
+	 </div>
+
+</div>
+
+
+
+app.css:
+======
+
+.switchCase{
+   
+    font-size:23;
+	color:blue;
+	font-width:bold;
+	text-align:center;
+
+}
+
+
+
+
+

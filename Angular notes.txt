@@ -1,0 +1,191 @@
+Development environment:
+========================
+
+Editor:
+-------
+ visual studio code 
+ 
+ You need to choose an editor for creating your angular projects. 
+ You can choose any editor of your choice including any editions of Visual 
+ Studio, Eclipse, Atom etc.
+
+We will be using Visual Studio code as our editor. Visual studio code is 
+an open source project and free to use. It can run on Windows, Linux & 
+OS X. It has IntelliSense support, easy integration with Git and support 
+for debugging the applications. It has a great support for Typescript.
+
+Install package manager:
+-------------------------
+To install ngular and depencies , we are going to NODE PACKAGE MANAGAER
+OR "npm".
+
+   Node package manager:
+   -----------------------
+   The NPM is a Package Manager similar to what NuGet is for Visual Studio.
+It is the Package manager of choice for the Javascript projects. 
+NPM is used to install libraries, Packages & applications from Public 
+repositories.
+    why it is Required:
+	--------------------
+	We are going to use NPM to install Angular, Typescript, and any other 
+packages/modules required by our application. NPM is can be used to 
+upgrade these packages as and when necessary. Without NPM, we have to 
+download and install all these packages manually.
+
+   installing NPM:
+   ----------------
+   you need to install npm on your machine if it is already installed.
+
+NPM installed as a part of the NODEJS.
+
+
+CHOOSE LANGUAGE:
+==============
+IF you want to create angular application you need to write one language
+qi.e javascript,typescript,dart, etc
+
+  Now a days Typscript is popular to creqate angualr application.
+  
+    what is typscript?
+	-----------------
+	   The "Typescript" is superset of "javascript" 
+	        the code written in typescript cannot be used directly on the browser
+it must be compiled tp javascript before running on web browser.
+		this process isa called  "Transpilling".
+      Typescript is opensource langauge, maintained by "MICROSOFT".
+
+Features of Typescript:
+-----------------------
+  it supports for modules, classes, interfaces, generics	
+  it support all curent versions of "javascript" ES6, ES2015.
+  It can transpile either ES6 or ES2015.
+
+
+Along with angular cli typescript can be installed.
+
+Installing Angular:
+------------------------
+we install angual by using Angular command line interface(CLI)
+
+Angular CLI helps to create angular application with all packages,files
+with on esingle command.
+
+    to install:
+               
+              npm install -g @angular/cli
+
+    to find version:  ng --version
+
+
+The Angular CLI creates the Angular Application and uses Typescript, 
+Webpack ( for Module bundling), Karma ( for unit testing), 
+Protractor ( for an end to end testing).
+
+creating a new angualr appliation:
+===================================
+
+Generate a new project : ng new my-app      
+                                  
+								   (my-app is the project name)
+								   
+Go to the project Directory: cd my-app
+
+Launches the server: ng serve
+																				
+																					
+ The above command compiles the angular application and invokes the 
+"WEBPACK development server".
+   The server keep on eye on the project and when you change any thing in the project
+it compiles project again.
+
+The webpack developemnt server listen on the HTTP port 4200 
+   Hence open the browser and type http://localhost:4200/ and you will see GettingStarted app 
+is running displayed on the browser. 
+  
+Architecture of Angular:
+-----------------------
+   Building blocks of Angular:
+    ------------------
+	           Modules
+			   Components
+			   Metadata
+			   Templates
+			   DataBinding
+			   Directives
+			   Services
+
+Modules:
+---------
+Angular appliation is modular in nature.
+    in each module we have components, directives, pipes, services
+Every angualr we have one deflut module that is root module,
+
+Component:
+---------
+Angua;r 4 is the component based 
+Encapsulates the template, data and behaviour of view.
+  Every angualr application has one major component i.e root component.
+  
+A component needs that a view for that we need "Template"
+
+Template:
+---------
+Acomponent nedds to have view.To define a view , you can define templates.
+
+A template is a form of  HTML that tells angualr how to render the component.
+
+Metadata:
+---------
+Metadata tells Angular how to process a class.
+
+you must add metadata to your code so that angualr knows what to do.
+
+DatBinding
+--------------
+Angualr supports databinding , a mechanism for coordinating parts of a 
+template with parts of a component.
+
+Directives:
+----------
+Angualr templates are "dynamic" . 
+   when angualr renders them, it transforms the DOM according to the 
+instructions given by diectives.
+
+<div highlight> Highlite me....</div>
+
+Services:
+----------
+Angualr service is a class that encapsulates some sort of functiinality and 
+provides its s service for the rest of your application.	
+			   
+  
+  
+  
+  
+  
+  
+  Bootstrap:
+  ==========
+  
+  if you want to add bootsrap style to yur angular project how?
+  
+  goto-->getbootsrap.com-->copy cdn link--->css, poppper.js, j query, we can copy links
+  
+  otherway to add depencies:
+  ---------------
+  open new terminal
+        npm install jquery popper.js
+		
+		npm install bootsrap
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

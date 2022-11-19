@@ -1,0 +1,525 @@
+Agenda:
+==========
+Angular introduction
+Angular installation and getting started
+first program- hello world app
+components
+interpolation
+property binding
+class binding
+style binding
+event binding
+Template Reference varuables
+Two- way data binding
+ngif directive
+ngswitch directive
+ngfor directive
+component interaction
+pipes
+services
+sependency injection
+using a services
+HTTP and Observables
+fetching data using HTTP
+HTTP Error handling
+Routing and navigation
+wild card routes and re direction
+route parameters
+paramMap observable
+optional route parameters
+relative navigation 
+child routes
+lazy loading
+routes gaurds
+angular forms- introduction
+template driven forms
+setting up a new project
+adding form html
+binding data with ngform
+binding data to model
+tracking state and validity
+validation vith visual feedback
+displaying error messages
+select control validation
+form validation
+submitting form data
+express server reciev form data
+error handling
+TDF vs RAEACTIVEforms
+reactive forms
+adding form HTML
+creating the form modal
+nesting form groups
+managing control values
+formbuilder services
+simple validation
+custom validation
+cross field vslidation
+conditional validation
+dynamic form controls
+angular material & bootstrap 5
+introduction to Nosql database
+MongoDB
+
+
+Introduction:
+=============
+ Angular is an open source javascript binding framework to build web applications.(client side)
+ 
+ Angular binds model with view architecture
+ 
+ angular helps to implemnt MVVM(MODEL view view model) pattern
+ 
+ angular is used to develop SPAs (Single page applications)
+ 
+ angular helps to load parts of webpages asynchronously rather tahn loading entire page.
+ 
+ By design, angular promates "modular approach" and hence  the application wil havw clear structure.
+ 
+ by using components feature , we have a lot re-useble code
+ 
+ with the help of angulars inbuilt capabilities like validtiton , routing the development become
+ quicker and easier.
+ 
+ In angular it is possible  to do unit test and easily maintain the code
+ 
+ angular is the product of google team and makes us of type script language from microsoft.
+ 
+ versions;
+ =========
+ 
+ 1 to 10
+ 
+ 10.0.4
+ 10==>major(twise a year it can change)
+ 0==>major parts upadates
+ 4==>bugs upadat
+ 
+ 
+ IF you want learn ANGULAER you knows
+             basics  of
+			 
+			 html
+			 css
+			 javscript
+			 type script
+
+TypeScript:
+===========
+
+
+Type script is an open sorce pure object oriented language.
+
+itis a strongly typed superset of java script,which compiles  to palin java scripts
+
+it is developed and maintained by microsoft under Apache licence
+
+it is not run directly on the browser, it needs a compiler  to compile and generate a java 
+script file(uses v8 engine)
+
+typescript sorce file  is in .ts extension
+
+Type script was designed by "Anderes Hejlsberg" designer of c# at microsoft.
+
+finally
+      typescript = javascript+some additional features.
+
+
+advantages:
+==========
+type script always highlets the error at compile time, but in the javascripts errors 
+are hilghlets at run tume.
+
+type script suport strongly types or static typing , whereas this is not in javascript.
+
+types scripts run on any browser
+
+it has name space concept by defining a module
+
+
+Disadvantages:
+==============
+
+type script takes long time to compile the code.
+
+type script doesnot support abstract classes
+
+To run Type script application in browser , a compilation step is required  to transform Type script
+to java script.
+
+
+
+Installation and how to start:
+================================
+Required develpment enivironment:
+-------------------------------
+
+Node
+  - node is javascript runtime environment built in chrome's v8 javascript engine.
+  
+Npm 
+  -npm is a package managaer for the javascript programming language.
+  
+.Angular ClI
+
+Text editor 
+   visula studio code
+	
+
+* 1st install node js
+
+ open cmd and check weather its installed or not
+          type     npm --version  (it will show 6.4.13 like this) installed succesfully
+		  
+		  next
+		  ti install npm type in cmd 
+		  npm install -g @angular/cli
+		     weather installed or not   open cmd and type 
+			      ng --version
+				     it will show version
+
+
+==> open the visula studio
+  create a new folder (angular 10)
+       click on terminal==> new terminal
+	   
+	   bottom--> ng new hello world(project name)  =>enter=> yes/ no ==>type n(no)
+	   
+	   select stylesheet= >css==>enter
+         
+		 after that in your folder hello wrld file is seen>
+		 
+		 execution: ng serve
+		 
+		 it will shown compiled suucessfully
+		 
+		 open browser:  localhost:4200
+		                   it will show your projrct
+						   
+
+Architecture:
+===============
+module:
+=======
+    it is the first building blockof angular application
+	angular apps are modular in nature
+	angular applications is a collecction of individual modules
+	every module represents a feature area in angular
+	
+	Application:
+	   user module related to                       admin module related to application
+	   application user                                administartors.
+
+  Every angular application has atleast only one module, known as root-module.
+  
+  -By convention this is called as "app-module"
+  
+  -Each module made up of components and services
+
+
+
+ 
+how to create new component:
+===========================
+go to terminal bottom:
+         i want generate student component.
+		     
+			 ng g c student   press enter    ->       here g(generate) c (component)
+		
+app-student component created
+
+go to student.component.ts  -->select the "selector"=app-student ->copy ->paste in 
+                                                                      ->app.component.html
+   go to student.componet.html-->write what you need tags  and ->save
+      go to student.component.css-->apply the styles for for classe in html   -->save
+           	  
+     
+Interpolation:
+============
+
+
+if i want to create html,css,ts file in single file we have to write
+i want crete test component with in a single file i have css,html,ts
+
+command==>  ng g c test -it -is --skipTest=true
+                       (it= inline template:: is=inline styles)
+
+     
+styele tag:  
+   if you want write style tags in css single file use in between ``
+
+
+interpolation is used for make dynamic content. UI
+
+ for that what we need to do
+ 
+ 
+ write in the class
+ 
+      public name="sathya prakash";
+	       place this name in where you want use in  -->{{name}}
+    
+ above this called "binding"  one way binding
+          
+		  one way binding:(it will go only class to view)
+		  ---------------
+		  
+		  class ---------------------------------> view
+      public name="";                   <p> welcome to {{name}} </p>
+
+
+conacatnation:
+------------------
+
+binding expression:{{}}
+
+  {{"welcome to :" +name}}
+
+
+
+  <p>{{name.length}}</p> // 14
+
+  <p>{{name.toUpperCase()}}</p>     //SATHYA PRAKASH	
+  
+  
+  by using method:
+  ------------------
+  
+  userName(){
+     
+	return  "welcome to :" +this.name;
+	  
+  }
+  
+  
+  disadvtges of interpolation:
+  ===================
+  we canno t assign a value in interpolation it will give eror
+   {{x=4}}   : error(binding cannot contain assignmnt at a column)
+   
+   we canot declare site like href=http,,,,,:
+      if you want declare then go create variable in clss assign it
+  
+  
+  property binding:
+  ==================
+  property binding 
+  
+  for html attributes once give we cannot change the value
+  
+    <input type="text" value="angular 10">
+	
+	inspect-> console->$0.getAttribute('value');  //angular10
+	
+	for DOM(data object model)
+	
+	<inout [id]="coueseId" type="text" value="angular js">
+
+              here we give html value angular js and given binding [id] now chamge the values
+			  
+			  goto->class-> crete
+			            public courseId="123";
+						      if you check in the inspect the console
+                                        
+                                             $0.getAttribute('value');  // angular js(doesnt change)
+                                         
+										 $0.value;
+										            // 123   (chamged the value)
+
+
+
+class Binding:
+=============
+ 
+ 
+ 
+@Component({
+  selector: 'app-test',
+  template: `
+
+
+  <h2>CLASS BINDING</h2>
+  
+  <h2 [class]="myText"> class level binding</h2>
+  
+  <h2 [class]="mySize">  USED class Level binding</h2>
+  
+  
+  <!-- condion based binding-->
+
+  <h2 [class.TextStyle]="required"> by using conditional used class binding</h2>
+  
+  <!-- if we want provide multiple classes in isngle binding-->
+  <!-- ng is the custome directive if we want use more we use ng-->
+  
+  <h2 [ngClass]="Group"> Custome classes by Using ng</h2>
+  
+
+,
+styles: [ 
+   
+
+   h2{
+
+    text-align:center;
+    font-size:30px;
+   }
+   
+   .TextColor{
+        
+		color:green;
+   
+   }
+   
+   .TextSize{
+
+    font-size:60px;
+   }
+   .TextStyle{
+   
+   font-style:italic;
+   }
+   
+   `
+  ]
+})
+export class TestComponent implements OnInit {
+
+
+// by using conditional
+
+ public required=true;
+
+//create class binding
+
+public mySize="TextSize";
+
+public myText="TextColor";
+
+
+ public Group=
+  {
+    "TextColor": this.required, "TextSize" :this.required, "TextStyle" :this.required
+  }
+ 
+ 
+  ngOnInit(): void {
+  }
+
+  
+
+}
+
+
+
+Style Binding:
+-----------
+
+@Component({
+  selector: 'app-test',
+  template: `
+    <!--style bing we cn set the the value double with in single -->
+    <h2 [style.color]="'blue'">STYLE BINDING</h2>
+
+
+    <!-- by using property-->
+
+    <h2 [style.color]="myColor"> Style binding by using property</h2>
+
+   
+    <!-- by using conditional way-->
+    <!--if it is true print green other wise red -->
+
+    <h2 [style.color]="required ? 'green':'red'"> Style binding by using property</h2>
+  
+    <!-- by using more properties way/ if we want apply multiple classes we should apply custom directory ng-->
+
+    <h2 [ngStyle]="myStyles"> Style binding GROUP of properties</h2>
+
+  `,
+  styles: [
+   `
+   
+
+
+
+
+   `
+  ]
+})
+export class TestComponent implements OnInit {
+
+  public myColor="orange";
+
+  public required=true;
+
+  public myStyles={ color:"brown", fontStyle:"italic", fontSize:"40px"}
+  
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  
+
+}
+
+Event Binding:
+===============
+in the event binding is used to define
+
+           here view------------------------>> class
+
+create one button whenever you click the button the process is running from view to to class
+
+   in the button crete click assign to onclick
+      and create onclic() method 
+	     in  the onclick method  write as local variable value
+           but it is class leval variable if we want display class level variable use"interpolation"		 
+
+
+
+
+@Component({
+  selector: 'app-test',
+  template: `
+   
+  <!-- event binding-->
+
+  <br><br>
+
+  <button (click)="onclick()" type="button">click me</button>
+
+ <h2>{{greetings}}</h2>
+
+  `,
+  styles: [
+   `
+   
+  h2{
+
+    text-align:center;
+    font-size:40px;
+  }
+
+
+
+   `
+  ]
+})
+export class TestComponent implements OnInit {
+
+   public greetings="";
+  
+  
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+ 
+   onclick(){
+     this.greetings="wecome to Event binding";
+   }
+  
+
+}

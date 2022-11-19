@@ -1,0 +1,38 @@
+two way data binding:
+====================
+
+two way data binding is used to send data from view to  class to again to view
+
+view==>class==>view     (two way data binding)
+
+* if you want use two way data binding we need to import     ngModel froms  present angular forms
+
+**we need to import in app module.ts file and aslo copy in import place.
+
+
+ex:
+
+view:
+-----
+
+<input [(ngModel)]="variablename" type="text">
+
+<button type="button"> click me</button>
+
+<br><br>
+
+{{variable name}}
+
+
+
+class:
+=====
+
+varialename="";        ----> this variable name mention to display in view use "interpolation" aswellas in "ngmodule"
+
+
+
+
+
+
+
